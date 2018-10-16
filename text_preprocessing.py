@@ -6,7 +6,7 @@ os.chdir('C:/Users/***/Documents/')
 
 renal = open('./renalnotes_forNLP.txt',  encoding='utf-8').read()
 renal[:1000]
-
+individual = test.split('77endofline777')
 newtxt = ''
 for line in individual:
     #split the line using AlonaendAlona to get content of each column 
