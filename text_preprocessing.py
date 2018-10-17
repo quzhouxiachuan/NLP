@@ -62,3 +62,11 @@ for line in individual:
     newtxt = newtxt + newline
     #print (newline+'\n'+'================================')
  
+#delete the '\ufeff' at the beginning of the file to deal with the encoding errors 
+newtxt = re.sub('\ufeff', '', newtxt)
+newtxt = 'ir_id\tAlonaendAlona\tnote_key\tAlonaendAlona\tpatient_key\tAlonaendAlona\t department_key \tAlonaendAlona\t \
+department_name \tAlonaendAlona\t note_type \tAlonaendAlona\t note_text \tAlonaendAlona\t signed_date_key \tAlonaendAlona\t \
+lupus \tAlonaendAlona\t classIII \tAlonaendAlona\t classII \tAlonaendAlona\t nephritis \tAlonaendAlona\t proteinuria \tAlonaendAlona\t dsDNA \tAlonaendAlona\t ANA \tAlonaendAlona\tendofline' + newtxt
+# write into a new file with positions of each keywords 
+with open('renalnotes_newfile_101618.txt','w') as f:
+    f.write(newtxt)
